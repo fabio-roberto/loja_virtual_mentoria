@@ -23,6 +23,7 @@ import com.fabio.lojavirtual.enums.TipoEndereco;
 @SequenceGenerator(name = "seq_endereco", sequenceName = "seq_endereco", allocationSize = 1, initialValue = 1)
 public class Endereco implements Serializable {
 
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -129,16 +130,5 @@ public class Endereco implements Serializable {
 		return Objects.hash(id);
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Endereco other = (Endereco) obj;
-		return Objects.equals(id, other.id);
-	}
 
 }
