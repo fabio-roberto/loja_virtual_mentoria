@@ -3,6 +3,7 @@ package com.fabio.lojavirtual.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +25,8 @@ public class MarcaProduto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_marca_produto")
 	private Long id;
 
-	private String nome;
+	@Column(nullable = false)
+	private String nomeDesc;
 
 	public Long getId() {
 		return id;
@@ -34,12 +36,12 @@ public class MarcaProduto implements Serializable {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeDesc() {
+		return nomeDesc;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	
+	public void setNomeDesc(String nomeDesc) { 
+		this.nomeDesc = nomeDesc;
 	}
 
 	@Override
