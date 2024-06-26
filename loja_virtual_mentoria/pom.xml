@@ -68,7 +68,16 @@
 			<artifactId>jackson-jaxrs-json-provider</artifactId>
 			<version>2.11.0</version>
 		</dependency>
-		
+
+
+		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>7.3.1</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -82,8 +91,8 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.1.0</version>
 			</plugin>
-		</plugins>		
-		
+		</plugins>
+
 	</build>
 
 </project>
