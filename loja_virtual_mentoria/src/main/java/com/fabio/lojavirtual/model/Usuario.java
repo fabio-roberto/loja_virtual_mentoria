@@ -56,6 +56,48 @@ public class Usuario implements UserDetails {
 	private List<Acesso> acessos;
 
 	
+	
+	
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public Date getDataAtualSenha() {
+		return dataAtualSenha;
+	}
+
+	public void setDataAtualSenha(Date dataAtualSenha) {
+		this.dataAtualSenha = dataAtualSenha;
+	}
+
+	public List<Acesso> getAcessos() {
+		return acessos;
+	}
+
+	public void setAcessos(List<Acesso> acessos) {
+		this.acessos = acessos;
+	}
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return this.acessos;
