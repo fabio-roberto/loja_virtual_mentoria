@@ -5,11 +5,14 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.fabio.lojavirtual.model.Usuario;
 import com.fabio.lojavirtual.repository.UsuarioRepository;
 
+@Service
 public class ImplementacaoUserDetailsService implements UserDetailsService {
+	
 
 	@Autowired
 	private UsuarioRepository usuarioRepository;
@@ -21,9 +24,11 @@ public class ImplementacaoUserDetailsService implements UserDetailsService {
 
 		if (usuario == null) {
 			throw new UsernameNotFoundException("Usuário não foi encontrado");
+			
 		}
 
 		return new User(usuario.getLogin(), usuario.getPassword(), usuario.getAuthorities());
+		
 	}
 
 }
